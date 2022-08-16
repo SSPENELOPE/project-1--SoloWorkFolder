@@ -58,6 +58,8 @@ nav ul li{
     margin-right: 0%;
 }
 
+
+/*     Music Genre Dropdown Results        */
 .music-results {
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +69,7 @@ nav ul li{
     margin-left: auto;
     margin-right: auto;
     height: 80vh;
-    width: 60vw;
+    width: 50vw;
     border: 3px solid limegreen !important;
 }
 
@@ -80,11 +82,13 @@ nav ul li{
 
 .results-card {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
     height: 20vh;
-    /* min-width: 450px; */
+    text-align: center;
+    min-width: 400px;
     max-width: 400px;
-    align-items: flex-start;
     text-decoration: none;
     border: 3px solid yellow;
     background-color: rgb(72, 72, 72);
@@ -95,16 +99,39 @@ nav ul li{
 
 .card-title {
     margin: 0 auto;
-    color: rgb(8, 185, 14);
+    color: rgba(255, 165, 0);
     font-size: 15px;
+    background-color: black;
+    border-radius: .6em;
+}
+
+.venue-text {
+    margin: 0 auto;
+    color: purple;
+    text-shadow: 0.1px 0.2px 0.2px black;
+    font-size: 15px;
+    font-weight: 900;
+    border-radius: .6em;
 }
 
 .date-time {
     align-self: flex-end;
 }
 
+.details-div {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: rgba(255, 165, 0);
+    border-radius: .6em;
+    margin: 0 6px;
+}
+
 .website-link {
     align-self: flex-end;
+    text-decoration: underline;
 }
 
 .next-prev {
