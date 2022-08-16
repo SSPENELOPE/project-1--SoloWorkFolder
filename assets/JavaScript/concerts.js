@@ -20,6 +20,11 @@ function searchByGenre() {
         var apiUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=6&genreId=KnvZfZ7vAeA&apikey=taiF3boXdKk17IQ69YlGzA1O29aTWlnq";
     };
 
+    while (resultsContainer.parentNode) {
+        resultsContainer.parentNode.removeChild(resultsContainer);
+        break;
+    } 
+
     fetch(apiUrl, {
         method: "get",
     }
@@ -76,7 +81,11 @@ function searchByGenre() {
 
 function displayGenreResults(data) {
     var events = data._embedded.events;
- 
+    
+ /*    while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
+        break;
+    }  */
     console.log(events);
 
     for (var i = 0; i < events.length; i++) {
